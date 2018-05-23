@@ -116,7 +116,7 @@ webhooks:
         apiVersions: ["*"]
         resources: ["*"]
     clientConfig:
-      caBundle: $(base64 ca.crt)
+      caBundle: $(base64 --wrap=0 ca.crt)
       service:
         namespace: opa
         name: opa
